@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RUBM | Teacher Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-page">
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-logo">
+
+                <div class="logo-icon">
+                    R
+                </div>
+
+                <div>
+
+                    <h1>
+                        RUBM
+                    </h1>
+
+                    <p>
+                        Role-Based User Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-user">
+
+                <span class="role-badge">
+                    TEACHER
+                </span>
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="dashboard-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="dashboard-heading">
+
+                <span class="small-label">
+                    TEACHER PORTAL
+                </span>
+
+                <h2>
+                    Welcome back 👋
+                </h2>
+
+                <p>
+                    Manage and view the students assigned
+                    to you.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 STUDENT SECTION
+            ================================== -->
+
+            <section class="dashboard-card teacher-students-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            MY STUDENTS
+                        </span>
+
+                        <h3>
+                            Assigned Students
+                        </h3>
+
+                    </div>
+
+                    <div class="card-icon">
+                        👨‍🎓
+                    </div>
+
+                </div>
+
+
+                <!-- STUDENT LIST -->
+
+                <div
+                    id="studentsContainer"
+                    class="students-container"
+                >
+
+                    <div class="student-loading">
+
+                        <div class="loading-spinner"></div>
+
+                        <p>
+                            Loading students...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 ACCESS NOTICE
+            ================================== -->
+
+            <div class="dashboard-notice">
+
+                <span class="notice-icon">
+                    🔐
+                </span>
+
+                <div>
+
+                    <strong>
+                        Teacher access
+                    </strong>
+
+                    <p>
+                        You can view and update only the
+                        students assigned to you.
+                        Student deletion is not permitted.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </main>
+
+
+        <!-- =================================
+             STUDENT EDIT MODAL
+        ================================== -->
+
+        <div
+            id="studentModal"
+            class="student-modal"
+        >
+
+            <div class="student-modal-content">
+
+
+                <!-- MODAL HEADER -->
+
+                <div class="student-modal-header">
+
+                    <div>
+
+                        <span class="card-label">
+                            STUDENT PROFILE
+                        </span>
+
+                        <h3>
+                            View / Edit Student
+                        </h3>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="closeStudentModal"
+                        class="modal-close-button"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     STUDENT EDIT FORM
+                ================================== -->
+
+                <form id="studentEditForm">
+
+                    <input
+                        type="hidden"
+                        id="editStudentId"
+                    >
+
+
+                    <div class="modal-form-grid">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="input-group">
+
+                            <label for="editFullName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editFullName"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="input-group">
+
+                            <label for="editEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="editEmail"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="input-group">
+
+                            <label for="editPhone">
+                                Phone
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editPhone"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DATE OF BIRTH -->
+
+                        <div class="input-group">
+
+                            <label for="editDob">
+                                Date of Birth
+                            </label>
+
+                            <input
+                                type="date"
+                                id="editDob"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- STANDARD -->
+
+                        <div class="input-group">
+
+                            <label for="editStandard">
+                                Standard
+                            </label>
+
+                            <input
+                                type="text"
+                                id="editStandard"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         MODAL ACTIONS
+                    ================================== -->
+
+                    <div class="modal-actions">
+
+                        <button
+                            type="button"
+                            id="cancelStudentEdit"
+                            class="modal-cancel-button"
+                        >
+                            Cancel
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="student-action-button modal-save-button"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="../js/teacher-dashboard.js"></script>
+
+</body>
+
+</html>

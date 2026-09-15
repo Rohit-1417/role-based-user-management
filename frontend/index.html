@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RUBM | Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <!-- Left Branding Section -->
+        <section class="brand-section">
+
+            <div class="brand-logo">
+                <div class="logo-icon">R</div>
+                <div>
+                    <h1>RUBM</h1>
+                    <p>Role-Based User Management</p>
+                </div>
+            </div>
+
+            <div class="brand-content">
+                <span class="small-label">SMART • SECURE • CONNECTED</span>
+
+                <h2>
+                    Different Roles.<br>
+                    <span>One Better System.</span>
+                </h2>
+
+                <p>
+                    A secure platform designed to connect
+                    administrators, teachers and students
+                    through one intelligent system.
+                </p>
+            </div>
+
+            <div class="brand-footer">
+                <span>Secure Access</span>
+                <span>•</span>
+                <span>Role Based</span>
+                <span>•</span>
+                <span>Fast & Reliable</span>
+            </div>
+
+        </section>
+
+
+        <!-- Right Login Section -->
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <div class="mobile-logo">
+                    <div class="logo-icon">R</div>
+                    <div>
+                        <h1>RUBM</h1>
+                        <p>Role-Based User Management</p>
+                    </div>
+                </div>
+
+                <div class="login-header">
+                    <span class="welcome-text">WELCOME BACK</span>
+
+                    <h2>Sign in to your account</h2>
+
+                    <p>
+                        Enter your credentials to continue
+                        to your dashboard.
+                    </p>
+                </div>
+
+
+                <form id="loginForm">
+
+                    <!-- Email -->
+                    <div class="input-group">
+
+                        <label for="email">Email Address</label>
+
+                        <div class="input-wrapper">
+                            <span class="input-icon">✉</span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="input-group">
+
+                        <div class="password-label">
+                            <label for="password">Password</label>
+
+                            <a href="forgot-password.html">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                id="togglePassword"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Remember Me -->
+                    <div class="login-options">
+
+                        <label class="remember">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        <span>Login</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+
+                <!-- OTP Login -->
+                <button
+                    type="button"
+                    class="otp-button"
+                >
+                    Login with OTP
+                </button>
+
+
+                <!-- Register -->
+                <div class="register-section">
+
+                    <span>Don't have an account?</span>
+
+                    <a href="register.html">
+                        Create an account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

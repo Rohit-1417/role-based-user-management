@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RUBM | Student Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-page">
+
+        <!-- ================================
+             HEADER
+        ================================= -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-logo">
+
+                <div class="logo-icon">
+                    R
+                </div>
+
+                <div>
+
+                    <h1>
+                        RUBM
+                    </h1>
+
+                    <p>
+                        Role-Based User Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-user">
+
+                <span class="role-badge">
+                    STUDENT
+                </span>
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================
+             MAIN CONTENT
+        ================================= -->
+
+        <main class="dashboard-content">
+
+            <div class="dashboard-heading">
+
+                <span class="small-label">
+                    STUDENT PORTAL
+                </span>
+
+                <h2>
+                    Welcome back 👋
+                </h2>
+
+                <p>
+                    View your profile and assigned teacher
+                    information.
+                </p>
+
+            </div>
+
+
+            <!-- ================================
+                 PROFILE SECTION
+            ================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- STUDENT PROFILE -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                MY PROFILE
+                            </span>
+
+                            <h3>
+                                Student Information
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            👤
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <div class="info-item">
+
+                            <span>
+                                Full Name
+                            </span>
+
+                            <strong id="studentName">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong id="studentEmail">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong id="studentPhone">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Date of Birth
+                            </span>
+
+                            <strong id="studentDob">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Standard
+                            </span>
+
+                            <strong id="studentStandard">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================
+                     TEACHER INFORMATION
+                ================================= -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-label">
+                                MY TEACHER
+                            </span>
+
+                            <h3>
+                                Assigned Teacher
+                            </h3>
+
+                        </div>
+
+                        <div class="card-icon">
+                            👨‍🏫
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="teacherInfo"
+                        class="profile-info"
+                    >
+
+                        <div class="info-item">
+
+                            <span>
+                                Teacher Name
+                            </span>
+
+                            <strong id="teacherName">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Email
+                            </span>
+
+                            <strong id="teacherEmail">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span>
+                                Subject
+                            </span>
+
+                            <strong id="teacherSubject">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ================================
+                 READ ONLY NOTICE
+            ================================= -->
+
+            <div class="dashboard-notice">
+
+                <span class="notice-icon">
+                    🔒
+                </span>
+
+                <div>
+
+                    <strong>
+                        Read-only access
+                    </strong>
+
+                    <p>
+                        Students can view their own profile
+                        and assigned teacher information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="../js/student-dashboard.js"></script>
+
+</body>
+
+</html>
